@@ -9,7 +9,7 @@ from langchain.prompts import (
 )
 import streamlit as st
 from streamlit_chat import message
-from utils import *
+#from utils import *
 import pinecone
 import openai
 
