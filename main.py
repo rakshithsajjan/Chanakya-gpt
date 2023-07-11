@@ -18,7 +18,6 @@ import os
 headers = {
     "auhorization": st.secrets["OPENAI_API_KEY"],
     "auhorization": st.secrets["pinecone_api"],
-    "auhorization": st.secrets["openai.api_key"],
     "content-type": "application/json"
     }
 
@@ -31,7 +30,7 @@ hide_streamlit_style = """
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
-
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 st.subheader("ChanakyaGPT")
 
