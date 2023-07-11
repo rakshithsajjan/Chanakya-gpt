@@ -46,7 +46,7 @@ model_name = 'text-embedding-ada-002'
 text_field = "text"
 embed = OpenAIEmbeddings(
     model=model_name,
-    openai_api_key=OPENAI_API_KEY
+    openai_api_key= st.secrets["OPENAI_API_KEY"]
 )
 vectorstore = Pinecone(
     index, embed.embed_query, text_field
