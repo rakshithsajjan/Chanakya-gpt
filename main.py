@@ -31,11 +31,8 @@ headers = {
 }
 
 
-st.subheader("Ask ChanakyaGPT")
+st.subheader("ChanakyaGPT")
 
-OPENAI_API_KEY = ("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")
-PINECONE_API_KEY = ("8c2079b0-03bf-40e3-aacd-d41e5bd4c589")
-openai.api_key = "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"
 
 ####################################################
 
@@ -86,12 +83,12 @@ def get_conversation_string():
 
 
 if 'responses' not in st.session_state:
-    st.session_state['responses'] = ["How can I assist you?"]
+    st.session_state['responses'] = ["Namaskaram, I am ChanakyaGPT, how can I help you?"]
 
 if 'requests' not in st.session_state:
     st.session_state['requests'] = []
 
-llm = ChatOpenAI(model_name="gpt-3.5-turbo", openai_api_key=OPENAI_API_KEY, temperature=1.4,streaming=True)
+llm = ChatOpenAI(model_name="gpt-3.5-turbo", openai_api_key=OPENAI_API_KEY, temperature=1.1,streaming=True)
 
 if 'buffer_memory' not in st.session_state:
             st.session_state.buffer_memory=ConversationBufferWindowMemory(k=3,return_messages=True)
