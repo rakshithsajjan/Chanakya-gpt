@@ -14,6 +14,13 @@ import pinecone
 import openai
 
 
+headers = {
+    "auhorization": st.secrets["OPENAI_API_KEY"],
+    "auhorization": st.secrets["PINECONE_API_KEY"],
+    "auhorization": st.secrets["openai.api_key"],
+    "content-type": "application/json"
+    }
+
 
 hide_streamlit_style = """
             <style>
@@ -23,19 +30,12 @@ hide_streamlit_style = """
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
-headers = {
-    "auhorization": st.secrets["OPENAI_API_KEY"],
-    "auhorization": st.secrets["PINECONE_API_KEY"],
-    "auhorization": st.secrets["openai.api_key"],
-    "content-type": "application/json"
-    }
-
 
 st.subheader("ChanakyaGPT")
 
 ####################################################
 
-pinecone.init(api_key=PINECONE_API_KEY,environment='us-west1-gcp-free' )
+pinecone.init(api_key = PINECONE_API_KEY, environment='us-west1-gcp-free' )
 index = pinecone.Index('chann')
 from langchain.vectorstores import Chroma, Pinecone
 
