@@ -24,10 +24,10 @@ hide_streamlit_style = """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
 headers = {
-     "auhorization": st.secrets["OPENAI_API_KEY"],
-     "auhorization": st.secrets["PINECONE_API_KEY"],
-     "auhorization": st.secrets["openai.api_key"],
-     "content-type": "application/json"
+    "auhorization": st.secrets["OPENAI_API_KEY"],
+    "auhorization": st.secrets["PINECONE_API_KEY"],
+    "auhorization": st.secrets["openai.api_key"],
+    "content-type": "application/json"
 }
 
 
