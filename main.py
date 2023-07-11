@@ -26,9 +26,10 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 headers = {
     "auhorization": st.secrets["OPENAI_API_KEY"],
     "auhorization": st.secrets["PINECONE_API_KEY"],
+    "auhorization": st.secrets["openai.api_key"],
     "content-type": "application/json"
-}
-openai.api_key = OPENAI_API_KEY
+    }
+
 
 st.subheader("ChanakyaGPT")
 
