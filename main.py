@@ -16,7 +16,7 @@ import openai
 
 headers = {
     "auhorization": st.secrets["OPENAI_API_KEY"],
-    "auhorization": st.secrets["PINECONE_API_KEY"],
+    "auhorization": st.secrets["pinecone_api"],
     "auhorization": st.secrets["openai.api_key"],
     "content-type": "application/json"
     }
