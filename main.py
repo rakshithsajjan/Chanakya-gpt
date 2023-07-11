@@ -35,7 +35,7 @@ st.subheader("ChanakyaGPT")
 
 ####################################################
 
-pinecone.init(api_key = PINECONE_API_KEY, environment='us-west1-gcp-free' )
+pinecone.init(api_key = pinecone_api , environment='us-west1-gcp-free' )
 index = pinecone.Index('chann')
 from langchain.vectorstores import Chroma, Pinecone
 
