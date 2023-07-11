@@ -1,5 +1,5 @@
 streamlit
 streamlit_chat
 langchain
-pinecone
+"pinecone-client[grpc]"==2.2.1
 openai
